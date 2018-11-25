@@ -15,6 +15,19 @@ import { MaterialModule } from './material';
 import { NavegacionPrincipalComponent } from './navegacion-principal/navegacion-principal.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { TacometroComponent } from './tacometro/tacometro.component';
+// Import angular-fusioncharts
+import { FusionChartsModule } from 'angular-fusioncharts';
+
+// Import FusionCharts library and chart modules
+import * as FusionCharts from 'fusioncharts';
+import * as Widgets from 'fusioncharts/fusioncharts.widgets';
+
+import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
+// Pass the fusioncharts library and chart modules
+FusionChartsModule.fcRoot(FusionCharts, Widgets, FusionTheme);
+
 
 
 @NgModule({
@@ -22,7 +35,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     AppComponent,
     RegistroComponent,
     InicioSesionComponent,
-    NavegacionPrincipalComponent
+    NavegacionPrincipalComponent,
+    TacometroComponent
    ],
   imports: [
     BrowserModule,
@@ -30,6 +44,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     MaterialModule,
     AppRoutingModule,
     HttpModule,
+    FusionChartsModule,
     RouterModule.forRoot([
       {path: 'inicio-sesion', component: InicioSesionComponent},
       {path: 'registro', component: RegistroComponent},

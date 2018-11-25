@@ -14,14 +14,36 @@
 
 }
 
+.mat-sidenav-content{
+  background: #FFFFFF;
+}
+
 .mat-toolbar.mat-primary {
   position: fixed;
 }
 
-p{
-  color:#FFFFFF;
+.ContenedorBarraHerramientas{
   background: #002C5C;
+}
 
+.ContenedorPrincipal{
+  background: #002C5C;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.ContenedorSecundario{
+  background: white;
+}
+
+p{
+  color: white;
 }
 
 #botonEstadisticas{
@@ -36,10 +58,12 @@ p{
 
 #botonPuntos:hover{
   background-color: #2B82F1;
+  width: 100%;
 }
 
 #botonEstadisticas:hover{
   background-color: #2B82F1;
+  width: 100%;
 }
 
 .mat-list-item {
@@ -53,15 +77,30 @@ p{
 .mat-icon{
   color: #FFFFFF;
   font-size: 30px;
+  height: 40px;
+  padding-bottom: 5px;
 }
 
+#menu{
+  position: relative;
+  top: 15px;
+}
+
+
+
 .example-spacer {
-  flex: 1 1 auto;
+  border-block-end: 100%;
 }
 
 .example-icon {
   padding: 0 14px;
+  float: right;
+  padding-top: 15px
 }
 
+.Tacometro{
+  padding: 10px;
+  width: 500px;
+}
 
 
