@@ -1,0 +1,56 @@
+<mat-toolbar-row  color="primary">
+    <button
+      id="botonMenu"
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="drawer.toggle(); move();">
+      <mat-icon aria-label="Side nav toggle icon" color="#FFFFFF">menu</mat-icon>
+    </button>
+    <span>
+      <img src = "../assets/imagenes/TEColonesConFondoAzul.png" style="height:45px; width:250px"
+      routerLink="/navegacion-principal"/>
+    </span>
+    <span class="example-spacer"></span>
+    <mat-icon  class="example-icon">contact_support</mat-icon>
+    <mat-icon  class="example-icon">account_circle</mat-icon>
+  </mat-toolbar-row>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      opened="false"
+      fixedTopGap="75">
+
+    <mat-nav-list>
+      <a mat-list-item (click)="funcion()">
+        <button mat-button id="botonEstadisticas">
+          <p> Mis estadisticas </p>
+        </button>
+      </a>
+      <a mat-list-item>
+        <button mat-button id="botonPuntos" (click)="funcion()">
+          <p> Cambio de puntos </p>
+        </button>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+
+
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div id="Contenedor">
+  <div *ngIf="isSelected">
+      <p>Hola Mundo</p>
+  </div>
+  <div *ngIf="!isSelected">
+    <p>Hello World</p>
+  </div>
+
+</div>
+
+
