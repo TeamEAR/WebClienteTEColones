@@ -22,11 +22,20 @@ import { FusionChartsModule } from 'angular-fusioncharts';
 // Import FusionCharts library and chart modules
 import * as FusionCharts from 'fusioncharts';
 import * as Widgets from 'fusioncharts/fusioncharts.widgets';
+import * as Charts from 'fusioncharts/fusioncharts.charts';
+
 
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import { CuadriculaDashboardComponent } from './cuadricula-dashboard/cuadricula-dashboard.component';
+import { GraficoColumnasSimplesComponent } from './grafico-columnas-simples/grafico-columnas-simples.component';
+import { GraficoLineaSimpleComponent } from './grafico-linea-simple/grafico-linea-simple.component';
+import { GraficoFilaApiladaComponent } from './grafico-fila-apilada/grafico-fila-apilada.component';
+import { GraficoFilaComponent } from './grafico-fila/grafico-fila.component';
+import { TopEstudiantesComponent } from './top-estudiantes/top-estudiantes.component';
 
 // Pass the fusioncharts library and chart modules
-FusionChartsModule.fcRoot(FusionCharts, Widgets, FusionTheme);
+
+FusionChartsModule.fcRoot(FusionCharts, Charts, Widgets, FusionTheme);
 
 
 
@@ -36,7 +45,13 @@ FusionChartsModule.fcRoot(FusionCharts, Widgets, FusionTheme);
     RegistroComponent,
     InicioSesionComponent,
     NavegacionPrincipalComponent,
-    TacometroComponent
+    TacometroComponent,
+    CuadriculaDashboardComponent,
+    GraficoColumnasSimplesComponent,
+    GraficoLineaSimpleComponent,
+    GraficoFilaApiladaComponent,
+    GraficoFilaComponent,
+    TopEstudiantesComponent
    ],
   imports: [
     BrowserModule,

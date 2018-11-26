@@ -6,8 +6,8 @@ import { map } from 'rxjs/operators';
 export class PostService {
   constructor(private http: Http) {
     }
-  getPosts() {
-    return this.http.get('https://webapitecolones.azurewebsites.net/api/SedeXTECs').pipe(map(res => res.json()));
+  getPosts(endPath: string) {
+    return this.http.get('https://webapitecolones.azurewebsites.net/api/' + endPath).pipe(map(res => res.json()));
   }
 
 }
