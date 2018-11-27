@@ -24,25 +24,16 @@ export class NavegacionPrincipalComponent {
 
   constructor(private breakpointObserver: BreakpointObserver, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.isSelected = true;
-    this.desplegado = false;
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-
-  funcion() {
-    this.isSelected = !this.isSelected;
+  setSelectedFalse() {
+    this.isSelected = false;
   }
 
-  move() {
-    if (this.desplegado === false) {
-      document.getElementById('Contenedor').style.marginLeft = '210px';
-      this.desplegado = !this.desplegado;
-    } else {
-      document.getElementById('Contenedor').style.marginLeft = '10px';
-      this.desplegado = !this.desplegado;
-    }
+  setSelectedTrue() {
+    this.isSelected = true;
   }
-
 }

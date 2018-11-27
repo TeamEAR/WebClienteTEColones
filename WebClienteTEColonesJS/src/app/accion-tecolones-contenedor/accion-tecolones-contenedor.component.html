@@ -1,0 +1,38 @@
+<div class="ContenedoresPrincipales">
+  <div class="ContenedorTexto1">
+    <h2> Mis Puntos TEColones </h2>
+    <h2> 100000000 </h2>
+  </div>
+
+</div>
+<div class="ContenedoresPrincipales">
+  <div class="ContenedorTexto2">
+    <h2> Tipo de Cambio TEColones </h2>
+    <h3> por Matricula </h3>
+    <h3> por Comedor </h3>
+    <h4> 1000 </h4>
+    <h4> 800 </h4>
+  </div>
+</div>
+
+<div>
+  <form class="form1">
+    <h1>Cambio por colones</h1>
+    <select class= "listBox" name="Beneficios">
+        <option>Tipo de Beneficio</option>
+        <option *ngFor="let beneficio of beneficios">{{beneficio.NombreBeneficio}}</option>
+    </select>
+    <input class="PuntosCanje" type="text" placeholder="Puntos a canjear">
+    <input type="submit" value="Canjear">
+
+  </form>
+</div>
+
+<div>
+  <form class="form2">
+    <h1>Donar a un amigo</h1>
+    <input class="PuntosCanje" type="text" placeholder="Carnet de mi amigo">
+    <input class="PuntosCanje" type="text" placeholder="Puntos TEColones a canjear">
+    <input type="submit" value="Donar">
+  </form>
+</div>
