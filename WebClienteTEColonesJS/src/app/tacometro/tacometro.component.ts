@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
-import { HttpClient } from '@angular/common/http';
+import {PostService} from '../post.service';
+
+let cantidad: number;
 
 
 @Component({
@@ -11,12 +12,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TacometroComponent implements OnInit {
   dataSource: Object;
-  cantidad: number;
   peso: IPost;
   posts: IPost;
 
   constructor(private postService: PostService) {
-      this.obtenerPeso();
+    this.obtenerPeso();
+
       this.dataSource = {
           'chart': {
           'caption': 'Toneladas',
@@ -45,7 +46,7 @@ export class TacometroComponent implements OnInit {
       },
       'dials': {
           'dial': [{
-              'value': this.cantidad
+              'value': cantidad
           }]
       }
   };
@@ -54,20 +55,19 @@ export class TacometroComponent implements OnInit {
   obtenerPeso() {
     this.postService.getPosts('Tacometro').subscribe(posts => {
       this.peso = posts;
-      console.log(this.peso.Peso);
+      this.setCantidad(this.peso.Peso);
     });
   }
 
   getCantidad() {
-    return this.cantidad;
+    return cantidad;
   }
 
   setCantidad(numero: number) {
-    this.cantidad = numero;
+    cantidad = numero;
   }
 
   ngOnInit() {
-    this.obtenerPeso();
   }
 
 }

@@ -31,12 +31,18 @@ export class NavegacionPrincipalComponent {
   }
 
 
-  setSelectedFalse() {
-    this.isSelected = false;
+  funcion() {
+    this.isSelected = !this.isSelected;
   }
 
-  setSelectedTrue() {
-    this.isSelected = true;
+  move() {
+    if (this.desplegado === false) {
+      document.getElementById('Contenedor').style.marginLeft = '210px';
+      this.desplegado = !this.desplegado;
+    } else {
+      document.getElementById('Contenedor').style.marginLeft = '10px';
+      this.desplegado = !this.desplegado;
+    }
   }
 
 }
