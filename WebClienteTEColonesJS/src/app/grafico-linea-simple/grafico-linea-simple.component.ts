@@ -1,62 +1,61 @@
 import { Component, OnInit } from '@angular/core';
 const data = {
   'chart': {
-    'caption': 'Average Fastball Velocity',
-    'yaxisname': 'Velocity (in mph)',
-    'subcaption': '[2005-2016]',
-    'numbersuffix': ' mph',
+    'caption': 'TEColones entregados por mes',
+    'yaxisname': 'TEColones',
+    'xaxisname': 'Mes',
     'rotatelabels': '1',
     'setadaptiveymin': '1',
     'theme': 'fusion'
   },
   'data': [
     {
-      'label': '2005',
-      'value': '89.45'
+      'label': 'Enero',
+      'value': '290'
     },
     {
-      'label': '2006',
-      'value': '89.87'
+      'label': 'Febrero',
+      'value': '260'
     },
     {
-      'label': '2007',
-      'value': '89.64'
+      'label': 'Marzo',
+      'value': '180'
     },
     {
-      'label': '2008',
-      'value': '90.13'
+      'label': 'Abril',
+      'value': '140'
     },
     {
-      'label': '2009',
-      'value': '90.67'
+      'label': 'Mayo',
+      'value': '115'
     },
     {
-      'label': '2010',
-      'value': '90.54'
+      'label': 'Junio',
+      'value': '100'
     },
     {
-      'label': '2011',
-      'value': '90.75'
+      'label': 'Julio',
+      'value': '30'
     },
     {
-      'label': '2012',
-      'value': '90.8'
+      'label': 'Agosto',
+      'value': '30'
     },
     {
-      'label': '2013',
-      'value': '91.16'
+      'label': 'Septiembre',
+      'value': '30'
     },
     {
-      'label': '2014',
-      'value': '91.37'
+      'label': 'Octubre',
+      'value': '30'
     },
     {
-      'label': '2015',
-      'value': '91.66'
+      'label': 'Noviembre',
+      'value': '30'
     },
     {
-      'label': '2016',
-      'value': '91.8'
+      'label': 'Diciembre',
+      'value': '30'
     }
   ]
 };
@@ -68,7 +67,7 @@ const data = {
 })
 export class GraficoLineaSimpleComponent implements OnInit {
       width = 400;
-      height = 250;
+      height = 300;
       type = 'line';
       dataFormat = 'json';
       dataSource = data;

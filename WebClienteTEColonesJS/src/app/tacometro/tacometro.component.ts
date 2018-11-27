@@ -20,11 +20,11 @@ export class TacometroComponent implements OnInit {
 
       this.dataSource = {
           'chart': {
-          'caption': 'Toneladas',
+          'caption': 'Toneladas totales recicladas',
           'lowerLimit': '0',
-          'upperLimit': '100',
+          'upperLimit': '20000',
           'showValue': '1',
-          'numberSuffix': '',
+          'numberSuffix': 'Kg',
           'theme': 'candy',
           'showToolTip': '0'
       },
@@ -32,15 +32,15 @@ export class TacometroComponent implements OnInit {
       'colorRange': {
           'color': [{
               'minValue': '0',
-              'maxValue': '50',
+              'maxValue': '10000',
               'code': '#F2726F'
           }, {
-              'minValue': '50',
-              'maxValue': '75',
+              'minValue': '10000',
+              'maxValue': '15000',
               'code': '#FFC533'
           }, {
-              'minValue': '75',
-              'maxValue': '100',
+              'minValue': '15000',
+              'maxValue': '20000',
               'code': '#62B58F'
           }]
       },

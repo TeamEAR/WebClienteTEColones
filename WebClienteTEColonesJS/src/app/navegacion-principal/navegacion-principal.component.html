@@ -29,23 +29,31 @@
 
           <mat-nav-list>
             <a mat-list-item >
-              <button mat-button id="botonEstadisticas" (click)="setSelectedTrue()">
+              <button mat-button id="botonEstadisticas" (click)="selectDashboard()">
                 <p> Mis estadisticas </p>
               </button>
             </a>
             <a mat-list-item>
-              <button mat-button id="botonPuntos" (click)="setSelectedFalse()">
+              <button mat-button id="botonPuntos" (click)="selecAccionTecolones()">
                 <p> Cambio de puntos </p>
+              </button>
+            </a>
+            <a mat-list-item >
+              <button mat-button id="botonEstadisticas" (click)="selectMaterial()">
+                <p> Agregar Material </p>
               </button>
             </a>
           </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-          <div class="Contenedor" *ngIf="isSelected">
+          <div class="Contenedor" *ngIf="DashboardSelected">
             <app-cuadricula-dashboard></app-cuadricula-dashboard>
           </div>
-          <div class="Contenedor" *ngIf="!isSelected">
+          <div class="Contenedor" *ngIf="AccionTecolonesSelected">
             <app-accion-tecolones-contenedor></app-accion-tecolones-contenedor>
+          </div>
+          <div class="Contenedor" *ngIf="MaterialSelected">
+            <app-administracion-materiales></app-administracion-materiales>
           </div>
 
           <!-- Add Content Here -->

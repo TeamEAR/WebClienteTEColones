@@ -12,8 +12,9 @@ import {MediaMatcher} from '@angular/cdk/layout';
 export class NavegacionPrincipalComponent {
 
   mobileQuery: MediaQueryList;
-  isSelected: boolean;
-  desplegado: boolean;
+  DashboardSelected: boolean;
+  AccionTecolonesSelected: boolean;
+  MaterialSelected: boolean;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -23,17 +24,29 @@ export class NavegacionPrincipalComponent {
     private _mobileQueryListener: () => void;
 
   constructor(private breakpointObserver: BreakpointObserver, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.isSelected = true;
+    this.DashboardSelected = true;
+    this.AccionTecolonesSelected = false;
+    this.MaterialSelected = false;
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  setSelectedFalse() {
-    this.isSelected = false;
+  selectDashboard() {
+    this.DashboardSelected = true;
+    this.AccionTecolonesSelected = false;
+    this.MaterialSelected = false;
   }
 
-  setSelectedTrue() {
-    this.isSelected = true;
+  selecAccionTecolones() {
+    this.DashboardSelected = false;
+    this.AccionTecolonesSelected = true;
+    this.MaterialSelected = false;
+  }
+
+  selectMaterial() {
+    this.DashboardSelected = false;
+    this.AccionTecolonesSelected = false;
+    this.MaterialSelected = true;
   }
 }

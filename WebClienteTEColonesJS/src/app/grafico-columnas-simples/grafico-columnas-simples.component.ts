@@ -6,44 +6,59 @@ import { Component, OnInit } from '@angular/core';
 
 const data = {
   'chart': {
-    'caption': 'Countries With Most Oil Reserves [2017-18]',
-    'subcaption': 'In MMbbl = One Million barrels',
-    'xaxisname': 'Country',
-    'yaxisname': 'Reserves (MMbbl)',
-    'numbersuffix': 'K',
+    'caption': 'Toneladas reciclados por mes',
+    'xaxisname': 'Mes',
+    'yaxisname': 'Toneladas',
+    'numbersuffix': 'Kg',
     'theme': 'fusion'
   },
   'data': [
     {
-      'label': 'Venezuela',
+      'label': 'Enero',
       'value': '290'
     },
     {
-      'label': 'Saudi',
+      'label': 'Febrero',
       'value': '260'
     },
     {
-      'label': 'Canada',
+      'label': 'Marzo',
       'value': '180'
     },
     {
-      'label': 'Iran',
+      'label': 'Abril',
       'value': '140'
     },
     {
-      'label': 'Russia',
+      'label': 'Mayo',
       'value': '115'
     },
     {
-      'label': 'UAE',
+      'label': 'Junio',
       'value': '100'
     },
     {
-      'label': 'US',
+      'label': 'Julio',
       'value': '30'
     },
     {
-      'label': 'China',
+      'label': 'Agosto',
+      'value': '30'
+    },
+    {
+      'label': 'Septiembre',
+      'value': '30'
+    },
+    {
+      'label': 'Octubre',
+      'value': '30'
+    },
+    {
+      'label': 'Noviembre',
+      'value': '30'
+    },
+    {
+      'label': 'Diciembre',
       'value': '30'
     }
   ]
