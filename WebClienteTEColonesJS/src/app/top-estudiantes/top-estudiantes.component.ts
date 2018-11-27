@@ -13,11 +13,6 @@ const ESTUDIANTES_DATA: ITop[] = [
   {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
   {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
   {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
-  {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
-  {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
-  {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
-  {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
-  {Nombre: 'Allan Chacon', Carnet: '2015141007', NombreSedeXTEC: 'Cartago', Cantidad_Material: 30},
 ];
 
 @Component({

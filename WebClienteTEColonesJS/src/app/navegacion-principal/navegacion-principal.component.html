@@ -28,21 +28,24 @@
             fixedTopGap="60">
 
           <mat-nav-list>
-            <a mat-list-item (click)="funcion()">
-              <button mat-button id="botonEstadisticas">
+            <a mat-list-item >
+              <button mat-button id="botonEstadisticas" (click)="setSelectedTrue()">
                 <p> Mis estadisticas </p>
               </button>
             </a>
             <a mat-list-item>
-              <button mat-button id="botonPuntos" (click)="funcion()">
+              <button mat-button id="botonPuntos" (click)="setSelectedFalse()">
                 <p> Cambio de puntos </p>
               </button>
             </a>
           </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-          <div class="Tacometro">
+          <div class="Tacometro" *ngIf="isSelected">
             <app-cuadricula-dashboard></app-cuadricula-dashboard>
+          </div>
+          <div *ngIf="!isSelected">
+            <app-accion-tecolones-contenedor></app-accion-tecolones-contenedor>
           </div>
 
           <!-- Add Content Here -->
