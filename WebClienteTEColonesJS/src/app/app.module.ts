@@ -32,7 +32,6 @@ import { GraficoLineaSimpleComponent } from './grafico-linea-simple/grafico-line
 import { GraficoFilaApiladaComponent } from './grafico-fila-apilada/grafico-fila-apilada.component';
 import { GraficoFilaComponent } from './grafico-fila/grafico-fila.component';
 import { TopEstudiantesComponent } from './top-estudiantes/top-estudiantes.component';
-import { AdministracionMaterialesComponent } from './administracion-materiales/administracion-materiales.component';
 
 // Pass the fusioncharts library and chart modules
 
@@ -52,8 +51,7 @@ FusionChartsModule.fcRoot(FusionCharts, Charts, Widgets, FusionTheme);
     GraficoLineaSimpleComponent,
     GraficoFilaApiladaComponent,
     GraficoFilaComponent,
-    TopEstudiantesComponent,
-    AdministracionMaterialesComponent
+    TopEstudiantesComponent
    ],
   imports: [
     BrowserModule,
